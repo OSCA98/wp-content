@@ -5,3 +5,8 @@ h2 {
 p {
   color: $color__darkblue;
 }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
