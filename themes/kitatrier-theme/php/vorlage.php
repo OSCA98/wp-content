@@ -42,6 +42,7 @@ get_header();
 
                 <?php
                 //erzeuge_html_inhalt_variante_1();
+                /* Änderung */
                 erzeuge_html_inhalt_variante_2();
 
                 ?>
@@ -55,6 +56,7 @@ get_header();
                     <?php
                     global $schneidershof;
                     erzeuge_Kitainfo($schneidershof);
+                    
                     ?>
                 </div>
             </div>
