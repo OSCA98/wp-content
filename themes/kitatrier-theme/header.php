@@ -28,7 +28,7 @@
 	<header>
 		<div id="header" class="section-wrap">
 			<div class="content-wrap">
-				<a href="/"><img id="logo" src="wp-content\themes\kitatrier-theme\assets\img\logo.png"
+				<a href="/"><img id="logo" src="wp-content/themes/kitatrier-theme/assets/img/logo.png"
 						title="KITA Schneidershof" alt="KITA Schneidershof" /></a>
 				<ul id="topmenu">
 					<li><a href="/impressum" title="Impressum">Impressum</a></li>
