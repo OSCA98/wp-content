@@ -1,0 +1,49 @@
+header {
+    #header {
+        height: 23rem;
+        background-image: url("./assets/img/puenktchen_pattern.png");
+        width: 100%;
+
+        .content-wrap {
+            position: relative;
+            width: 100rem;
+
+            #topmenu {
+                /*position: absolute;*/
+                top: 0rem;
+                /*right: 40px;*/
+                margin: 0rem;
+                padding: 0rem;
+                padding-right: 2rem;
+                list-style: none;
+                /*display: block;*/
+                float: right;
+
+                li {
+                    float: left;
+                    margin-left: 12px;
+
+                    a {
+                        display: block;
+                        padding: 0.8rem 1.3rem;
+                        -webkit-border-bottom-right-radius: 0.4rem;
+                        -webkit-border-bottom-left-radius: 0.4rem;
+                        -moz-border-radius-bottomright: 0.4rem;
+                        -moz-border-radius-bottomleft: 0.4rem;
+                        border-bottom-right-radius: 0.4rem;
+                        border-bottom-left-radius: 0.4rem;
+                        background-color: $color__orange;
+                        color: $color__white;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .section-wrap {
+        width: 100%;
+    }
+}
