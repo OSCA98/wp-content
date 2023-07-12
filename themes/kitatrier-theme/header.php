@@ -12,8 +12,9 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
@@ -21,19 +22,23 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+	<?php wp_body_open(); ?>
 
 
-<header>
-	<nav>
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			)
-		);
-		?>
-	</nav>
-</header>
-
+	<header>
+		<div id="header" class="section-wrap">
+			<div class="content-wrap">
+			<a href="/"><img id="logo" src="/assets/img/logo.png" title="KITA Schneidershof" alt="KITA Schneidershof" /></a>
+				<nav>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id' => 'primary-menu',
+						)
+					);
+					?>
+				</nav>
+			</div>
+		</div>
+	</header>
