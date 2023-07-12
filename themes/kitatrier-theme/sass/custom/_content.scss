@@ -1,17 +1,28 @@
 .content {
   width: 96rem;
-  background-color:$color__background-body;
+  background-color: $color__background-body;
+
   margin: {
     right: auto;
     left: auto;
-  };
+  }
+
+  ;
   padding: 2rem;
-  p > a {
+
+  p>a {
     color: $color__darkblue;
     font-size: 110%;
+
     :visited {
       color: inherit;
     }
   }
-  
+
+}
+
+@media(max-width: 800px) {
+  .content {
+    width: 100vw;
+  }
 }
