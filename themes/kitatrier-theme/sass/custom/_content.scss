@@ -1,0 +1,17 @@
+.content {
+  width: 1280px;
+  background-color:$color__background-body;
+  margin: {
+    right: auto;
+    left: auto;
+  };
+  padding: 2rem;
+  p > a {
+    color: $color__darkblue;
+    font-size: 110%;
+    :visited {
+      color: inherit;
+    }
+  }
+  
+}
