@@ -1,0 +1,48 @@
+footer {
+  width: 100%;
+  height: 200px;
+  background: url(./assets/img/footer-bg.jpg);
+
+  div {
+    width: 1280px;
+    height: 100%;
+    background-color: $color__turquoise;
+    margin: 0 auto;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 1em;
+      height: 100%;
+
+      li {
+        font-size: 1.6rem;
+
+        a,
+        a:visited {
+          color: $color__darkblue;
+          border-bottom: 2px solid $color__darkblue;
+          display: inline-block;
+          width: 100%;
+        }
+
+        .children {
+          margin-top: 1em;
+        }
+
+        .children > li {
+          border-bottom: none;
+        }
+
+        .children > li > a {
+          color: $color__white;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
