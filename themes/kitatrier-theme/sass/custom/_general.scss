@@ -1,12 +1,138 @@
-h2 {
-  color: $color__orange;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    vertical-align: baseline;
 }
 
-p {
-  color: $color__darkblue;
+html {
+    font-size: 1em;
+    line-height: 1.4;
+
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    color: #13364e;
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/*Vorlage*/
+
+/*Bild ersetzen*/
+.contentmain {
+    background-image: url("http://kitatemp.local/wp-content/uploads/2023/06/punkte_pattern.png");
+    background-position: 0px -20px;
+    /*margin-top: -2px;*/
+}
+
+.contentmain .content-wrap {
+    background: #fff;
+    padding: 0 20px 80px 20px;
+    /*width: calc($content - 40px);*/
+}
+
+.contentmain .content-wrap #col-normal {
+    color: #13364e;
+    float: left;
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 32px;
+    padding-right: 30px;
+    padding-top: 40px;
+    width: 698px;
+}
+
+.contentmain .content-wrap #col-right {
+    float: left;
+    width: 230px;
+    padding-top: 170px;
+    color: #13364e;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.contentmain h2 {
+    font-size: 34px;
+    line-height: 48px;
+    margin-bottom: 32px;
+    margin-top: 42px;
+}
+
+.contentmain h3 {
+    font-size: 24px;
+}
+
+.contentmain h2,
+.contentmain h3 {
+    color: #ec6825;
+    font-weight: normal;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+.contentmain .content-wrap #col-normal p {
+    margin-bottom: 24px;
+    padding-top: 0;
+    color: #13364e;
+}
+
+/*img und a testen!*/
+.contentmain .content-wrap #col-normal img {
+    margin-bottom: 2em;
+}
+
+.contentmain .content-wrap #col-normal a {
+    text-decoration: underline;
+    color: #13364e;
+}
+
+.contentmain .content-wrap #col-right {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    float: left;
+    width: 230px;
+    padding-top: 170px;
+    color: #13364e;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.contentmain .frame-beigebox {
+    padding: 20px;
+    background-color: #f1f1f1;
+    color: #ec6825;
+    font-size: 18px;
+    line-height: 1.6em;
+    margin-bottom: 20px;
+}
+
+.contentmain a.download {
+    background: url("http://kitatemp.local/wp-content/uploads/2023/07/download.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #32b5a3;
+    display: block;
+    padding-bottom: 15px;
+    padding-left: 80px;
+    font-size: 16px;
+
+    min-height: 56px;
+    margin-bottom: 20px;
+}
+#download{
+    padding-top: 20px;
+}
+strong {
+    font-weight: bold !important;
 }

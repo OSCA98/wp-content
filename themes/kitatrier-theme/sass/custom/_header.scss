@@ -1,0 +1,272 @@
+#header {
+    height: 230px;
+    background-image: url("http://kitatemp.local/wp-content/uploads/2023/06/puenktchen_pattern.png");
+    width: 100%;
+}
+
+.section-wrap {
+    width: 100%;
+}
+
+
+#header .content-wrap {
+    /*osition: relative;*/
+    width: 1000px;
+}
+
+.content-wrap {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 960px;
+    /*Breite in der Mitte*/
+}
+
+a {
+    text-decoration: none;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+#header #topmenu {
+    /*position: absolute;*/
+    top: 0px;
+    /*right: 40px;*/
+    margin: 0;
+    padding: 0;
+    padding-right: 20px;
+    list-style: none;
+    /*display: block;*/
+    float: right;
+}
+
+#header>a {
+    float: left;
+}
+
+#header #topmenu li {
+    float: left;
+    margin-left: 12px;
+}
+
+#header #topmenu li a {
+    display: block;
+    padding: 8px 13px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: #eb6725;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navigation {
+    background-color: #def1fd;
+    /*border-bottom: 2px solid #fff;*/
+    display: block;
+}
+
+.navigation .content-wrap {
+    padding-left: 0;
+    padding-right: 0;
+    width: 1000px;
+}
+
+.navigation ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.navigation ul li a {
+    color: #13364e;
+    display: block;
+    font-size: 20px;
+    padding: 14px 20px;
+}
+
+/*active muss dem aktuellen a-Tag als class mitgegeben werden*/
+.navigation ul li a.active {
+    background-color: #e6c632;
+    color: #13364e;
+}
+
+.subnavi {
+    background-color: #e6c632;
+}
+
+.subnavi ul {
+    padding: 12px 0;
+    margin-top: -2px;
+}
+
+.subnavi ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+/*active muss dem aktuellen a-Tag als class mitgegeben werden und bild muss ersetzt werden*/
+.subnavi ul li a.active {
+    background: url("../img/active_point.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    font-weight: bold;
+    padding-left: 18px;
+}
+
+.subnavi ul li a {
+    color: #13364e;
+    display: block;
+    font-size: 16px;
+}
+
+#openNav {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    width: 80px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background-color: #eb6725;
+    color: white;
+    z-index: 11;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
+}
+
+#closeNav {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    width: 80px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background-color: #13364e;
+    color: white;
+    z-index: 11;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
+}
+
+#mobile_inaktiv {
+    display: none;
+
+}
+
+#mobile_aktiv {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    overflow: auto;
+}
+
+.mobile div {
+    margin: auto;
+    margin-bottom: 0px;
+    width: 320px;
+}
+
+.mobile div:first-child {
+    margin-top: 85px;
+}
+
+.mobile div:last-child {
+    margin-bottom: 85px;
+}
+
+.mobile div:last-child {
+    padding-bottom: 50px;
+}
+
+/*Hauptseiten*/
+.mobile div>ul>li {
+    margin-top: 20px;
+}
+
+.mobile div>ul>li>a:first-child {
+    border-bottom: 3px solid;
+    color: #13364e;
+    display: block;
+    font-size: 28px;
+    max-width: 300px;
+    padding: 0 0 10px 0;
+}
+
+/*Unterseiten*/
+.mobile div>ul>li>ul {
+    padding: 5px 0;
+    max-width: 300px;
+}
+
+.mobile div>ul>li>ul>li {
+    padding: 12px 0 8px 0;
+    border-bottom: 1px solid;
+}
+
+.mobile div>ul>li>ul>li>a {
+    color: #13364e;
+    font-size: 18px;
+    border: none;
+    display: inline;
+    padding: 0 0 0 10px;
+}
+
+
+
+/*aktive seite und unterseite*/
+.activeMenu {
+    background-color: #e6c632;
+    color: #13364e;
+}
+
+.activeSubMenu {
+    background: url("http://kitatemp.local/wp-content/uploads/2023/07/active_point.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    font-weight: bold;
+    padding-left: 18px;
+}
+
+@media(max-width: 800px) {
+    #header .content-wrap {
+        width: 80% !important;
+    }
+
+    #mobile_nav a.openNavON {
+        display: block;
+    }
+
+    #mobile_nav a.openNavOFF {
+        display: none;
+    }
+
+    #mobile_nav a.closeNavON {
+        display: block;
+    }
+
+    #mobile_nav a.closeNavOFF {
+        display: none;
+    }
+
+    .navigation,
+    .subnavi,
+    #topmenu {
+        display: none;
+    }
+
+}
+
+@media(min-width: 801px) {
+    #mobile_nav {
+        display: none;
+    }
+}

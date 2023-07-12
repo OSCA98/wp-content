@@ -1,0 +1,103 @@
+footer {
+    background: url("http://kitatemp.local/wp-content/uploads/2023/06/footerbg.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+footer .content-wrap {
+    background: #32b5a3;
+    position: relative;
+    padding-bottom: 1em;
+    /*width: calc($content - 40px);*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .content-wrap #footerright {
+    /*float: left;*/
+    width: 230px;
+    padding-top: 40px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+footer .content-wrap #footerright div {
+    margin-bottom: 20px;
+}
+
+footer .content-wrap .footerleft {
+    /*bleibt*/
+    color: #13364e;
+    font-size: 22px;
+    line-height: 32px;
+    padding-right: 30px;
+    padding-top: 25px;
+    width: 698px;
+    padding-bottom: 60px;
+    /*float: left;*/
+}
+
+/*äußere ul/li*/
+footer .content-wrap .footerleft>div>ul>li {
+    /*bleibt*/
+    margin-top: 15px;
+    margin-right: 25px;
+    min-width: 200px;
+    /*beite der li's, wichtig*/
+}
+
+/*Hauptseiten*/
+footer .content-wrap .footerleft>div>ul>li>a {
+    border-bottom: 2px solid;
+    color: #13364e;
+    display: block;
+    font-size: 18px;
+    max-width: 200px;
+}
+
+/*Innerste li und a*/
+footer .content-wrap .footerleft div ul li ul li {
+    margin-top: 0;
+    height: 24px;
+    min-width: 200px;
+}
+
+footer .content-wrap .footerleft div ul li ul li a {
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    display: inline;
+    /*max-width: 200px;*/
+    width: 200px;
+}
+
+/*flex*/
+
+
+.footerleft {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topbutton {
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    width: min-content;
+}
+
+@media(max-width: 800px) {
+    .footerleft {
+        display: block;
+    }
+    footer .content-wrap {
+        max-width: 880px;
+        display: block;
+    }
+
+    footer .content-wrap .footerleft {
+        width: 90%;
+    }
+
+    footer .content-wrap .footerleft>div {
+        width: 90%;
+    }
+}
