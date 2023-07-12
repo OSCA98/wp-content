@@ -1,7 +1,17 @@
+html {
+  font-size: 10px;
+}
+
 h2 {
   color: $color__orange;
+  font-size: 3.4rem;
 }
 
 p {
   color: $color__darkblue;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
 }
