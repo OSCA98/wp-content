@@ -42,38 +42,37 @@ header {
                 }
             }
 
-            #openNav {
+            #mobile_nav{
+                
+                
+                >a{
+                font-size: 1.6rem;
+
                 display: none;
-                padding: 20px;
+                padding: 2rem;
                 text-align: center;
-                width: 80px;
+                padding-left: 4rem;
+                padding-right: 4rem;
                 top: 0;
                 right: 0;
                 position: fixed;
-                background-color: #eb6725;
-                color: white;
+                cursor: pointer;
                 z-index: 11;
+
                 -webkit-border-bottom-left-radius: 4px;
                 -moz-border-radius-bottomleft: 4px;
                 border-bottom-left-radius: 4px;
-                cursor: pointer;
+                }
+            }
+
+            #openNav {
+                background-color: $color__orange;
+                color: $color__white;
             }
 
             #closeNav {
-                display: none;
-                padding: 20px;
-                text-align: center;
-                width: 80px;
-                top: 0;
-                right: 0;
-                position: fixed;
-                background-color: #13364e;
-                color: white;
-                z-index: 11;
-                -webkit-border-bottom-left-radius: 4px;
-                -moz-border-radius-bottomleft: 4px;
-                border-bottom-left-radius: 4px;
-                cursor: pointer;
+                background-color: $color__darkblue;
+                color: $color__white;
             }
 
             #mobile_inaktiv {
@@ -90,6 +89,7 @@ header {
                 background-color: white;
                 overflow: auto;
             }
+
             .menu {
                 margin: 8.5rem auto;
                 width: 32rem;
@@ -170,13 +170,16 @@ header {
             margin: 0 auto;
             padding: 0 2rem;
             width: 96rem;
+
             .current-menu-parent ul a {
                 display: block !important;
             }
+
             >ul#sub-menu1 {
                 padding: 1.2rem 0;
                 margin-top: -0.2rem;
                 list-style: none;
+
                 li {
                     display: inline-block;
                     margin-right: 3rem;
@@ -184,9 +187,11 @@ header {
                     margin-right: 0;
                     padding: 0;
                     border: 0;
+
                     .current_page_item a {
                         font-weight: bold;
                     }
+
                     >a {
                         color: $color__darkblue;
                         display: none;
@@ -209,35 +214,38 @@ header {
 
 
 @media(max-width: 800px) {
-    #header {
-        #mobile_nav {
-            .content-wrap {
-                width: 80% !important;
-            }
+    header {
+        #header {
+            #mobile_nav {
+                .content-wrap {
+                    width: 80% !important;
+                }
 
-            a.openNavON {
-                display: block !important;
-            }
+                a.openNavON {
+                    display: block !important;
+                }
 
-            a.openNavOFF {
-                display: none !important;
-            }
+                a.openNavOFF {
+                    display: none !important;
+                }
 
-            a.closeNavON {
-                display: block !important;
-            }
+                a.closeNavON {
+                    display: block !important;
+                }
 
-            a.closeNavOFF {
-                display: none !important;
+                a.closeNavOFF {
+                    display: none !important;
+                }
             }
 
 
         }
+    }
 
-        .navigation,
-        #topmenu {
-            display: none !important;
-        }
+    .navigation,
+    .subnavi,
+    #topmenu {
+        display: none !important;
     }
 }
 
