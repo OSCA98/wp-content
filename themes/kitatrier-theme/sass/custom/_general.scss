@@ -4,8 +4,17 @@ html {
 
 body {
   background-image: url("./assets/img/punkte_pattern.png");
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
-
+.content{
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+}
+.content p{
+  font-size: 2rem;
+}
+ footer, h1, h2, h3{
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
 h2 {
   color: $color__orange;
   font-size: 3.4rem;
