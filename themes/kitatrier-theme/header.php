@@ -93,8 +93,15 @@
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id' => 'sub-menu1',
+					'walker' => new AWP_Menu_Walker(),
 				)
 			);
+			
 			?>
+
+
+
+
+
 		</div>
 	</header>
