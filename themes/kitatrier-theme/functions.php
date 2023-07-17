@@ -20,65 +20,6 @@ if (!defined('_S_VERSION')) {
  * as indicating support for post thumbnails.
  */
 
-class AWP_Menu_Walker_Original extends Walker_Nav_Menu
-{
-	function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
-	{
-		$output .= "<li class='" . implode(" ", $item->classes) . "'>";
-
-		if ($item->url && $item->url != '#') {
-			$output .= '<a href="' . $item->url . '">';
-		} else {
-			$output .= '<span>';
-		}
-
-		$output .= $item->title;
-
-		if ($item->url && $item->url != '#') {
-			$output .= '</a>';
-		} else {
-			$output .= '</span>';
-		}
-	}
-}
-class AWP_Menu_Walker extends Walker_Nav_Menu
-{
-	function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
-	{
-
-		$parent_id = $item->menu_item_parent;
-
-        if ($parent_id) {
-            $parent_ancestors = get_post_ancestors($item->ID);
-
-            if ($parent_ancestors) {
-				$output .= "<li class='" . implode(" ", $item->classes) . "'>";
-
-				if ($item->url && $item->url != '#') {
-					$output .= '<a href="' . $item->url . '">';
-				} else {
-					$output .= '<span>';
-				}
-
-				$output .= $item->title;
-
-				if ($item->url && $item->url != '#') {
-					$output .= '</a>';
-				} else {
-					$output .= '</span>';
-				}
-			}
-		}
-	}
-}
-
-
-
-
-
-
-
-
 function kitatrier_theme_setup()
 {
 	/*

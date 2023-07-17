@@ -93,21 +93,57 @@
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id' => 'sub-menu1',
-					'walker' => new AWP_Menu_Walker(),
+
 				)
 			);
 
 			?>
 			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+
+					var all_submenus = document.getElementById('sub-menu1');
+					//var current_submenu =all_submenus.querySelectorAll(".sub-menu");
+
+					//all_submenus=all_submenus.find(element=>element.classList.contains('current-menu-item'));
+					//console.log(all_submenus.find(element=>element.classList.contains('current-menu-item')));
+					//alert(all_submenus.innerHTML);
+					var current_submenu;
+					for (var i = 0; i < all_submenus.children.length; i++) {
+						console.log(all_submenus.children[i].classList);
+						all_submenus.children[i].firstChild.remove();
+
+						if (all_submenus.children[i].classList.contains('current-menu-item')) {
+							current_submenu = all_submenus.children[i];
+							break;
+						}
+					}
+					if(current_submenu.textContent.trim() === '') {
+						//alert('leer');
+						all_submenus.remove();
+					}
+					all_submenus.replaceWith(current_submenu);
+					console.log('all_submenus ',current_submenu.innerHTML);
+					
+
+					/*if(element.classList.contains('current-menu-parent')){
+						alert('current-menu-parent');
+						//element.remove();
+					}*/
+
+				});
+			</script>
+			<!--<script>
 				// Der Code wird ausgeführt, sobald die Seite geladen wurde
 				document.addEventListener("DOMContentLoaded", function () {
 
 					var submenu = document.getElementById('sub-menu1');
 					var submenu_ul = submenu.querySelectorAll(".sub-menu");
+					//console.log("submenu",submenu.children);
 
 					submenu_ul.forEach(submenu_ul_each => {
 						var current_erhalten = false;
 						var submenu_ul_li = submenu_ul_each.querySelectorAll(".menu-item");
+
 
 						submenu_ul_li.forEach(submenu_ul_li => {
 							if (submenu_ul_li.classList.contains('current-menu-item')) {
@@ -127,7 +163,7 @@
 						submenu.remove();
 					}
 				});
-			</script>
+			</script>-->
 
 
 
