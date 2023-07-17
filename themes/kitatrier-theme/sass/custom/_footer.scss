@@ -49,6 +49,9 @@ footer {
           color: $color__white;
           border-bottom: none;
         }
+        .children > li > a:hover{
+          color: $color__darkblue;
+        }
       }
     }
   }
