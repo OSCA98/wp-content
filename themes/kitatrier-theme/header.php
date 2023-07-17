@@ -96,8 +96,38 @@
 					'walker' => new AWP_Menu_Walker(),
 				)
 			);
-			
+
 			?>
+			<script>
+				// Der Code wird ausgeführt, sobald die Seite geladen wurde
+				document.addEventListener("DOMContentLoaded", function () {
+
+					var submenu = document.getElementById('sub-menu1');
+					var submenu_ul = submenu.querySelectorAll(".sub-menu");
+
+					submenu_ul.forEach(submenu_ul_each => {
+						var current_erhalten = false;
+						var submenu_ul_li = submenu_ul_each.querySelectorAll(".menu-item");
+
+						submenu_ul_li.forEach(submenu_ul_li => {
+							if (submenu_ul_li.classList.contains('current-menu-item')) {
+								//var element = submenu_ul_li;
+								//element.parentNode.remove();
+								//alert(submenu_ul_li.classList);
+								current_erhalten = true;
+							}
+						});
+						if (!current_erhalten) {
+							submenu_ul_each.remove();
+						}
+					});
+
+					if (submenu.textContent.trim() === '') {
+						//alert('leer');
+						submenu.remove();
+					}
+				});
+			</script>
 
 
 

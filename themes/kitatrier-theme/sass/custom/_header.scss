@@ -1,4 +1,7 @@
 header {
+
+    line-height: 1;
+
     >#header.section-wrap {
         height: 23rem;
         background-image: url("./assets/img/puenktchen_pattern.png");
@@ -6,7 +9,7 @@ header {
 
         >.content-wrap {
             position: relative;
-            width: 100rem;
+            width: 104rem;
             margin: 0 auto;
             padding: 0 2rem;
 
@@ -39,30 +42,35 @@ header {
                         text-decoration: none;
                         font-size: 1.5rem;
                     }
+
+                    >a:hover {
+                        background-color: $color__turkis;
+                    }
                 }
             }
 
-            #mobile_nav{
-                
-                
-                >a{
-                font-size: 1.6rem;
+            #mobile_nav {
 
-                display: none;
-                padding: 2rem;
-                text-align: center;
-                padding-left: 4rem;
-                padding-right: 4rem;
-                top: 0;
-                right: 0;
-                position: fixed;
-                cursor: pointer;
-                z-index: 11;
 
-                -webkit-border-bottom-left-radius: 4px;
-                -moz-border-radius-bottomleft: 4px;
-                border-bottom-left-radius: 4px;
+                >a {
+                    font-size: 1.6rem;
+
+                    display: none;
+                    padding: 2rem;
+                    text-align: center;
+                    padding-left: 4rem;
+                    padding-right: 4rem;
+                    top: 0;
+                    right: 0;
+                    position: fixed;
+                    cursor: pointer;
+                    z-index: 11;
+
+                    -webkit-border-bottom-left-radius: 4px;
+                    -moz-border-radius-bottomleft: 4px;
+                    border-bottom-left-radius: 4px;
                 }
+
             }
 
             #openNav {
@@ -74,6 +82,17 @@ header {
                 background-color: $color__darkblue;
                 color: $color__white;
             }
+
+            #openNav:hover {
+                background-color: $color__white;
+                color: $color__orange;
+
+            }
+
+            #closeNav:hover {
+                color: $color__orange;
+            }
+
 
             #mobile_inaktiv {
                 display: none;
@@ -127,7 +146,7 @@ header {
 
     >.navigation {
         background-color: $color__lightblue;
-        border-bottom: 0.2rem solid $color__white;
+        //border-bottom: 0.2rem solid $color__white;
         display: block;
 
         //Hauptmenü
@@ -141,7 +160,8 @@ header {
             >ul#primary-menu {
                 list-style: none;
 
-                .current-menu-parent {
+                .current-menu-parent,
+                .current_page_item {
                     background-color: $color__yellow;
                 }
 
@@ -158,27 +178,41 @@ header {
                     }
 
                 }
+
+                li:not(.current_page_item):not(.current-menu-parent):hover {
+                    >a {
+                        color: $color__orange;
+                    }
+                }
             }
         }
     }
 
     >.subnavi {
         background-color: $color__yellow;
+        line-height: 1;
 
         //content-wrap ersatz
         >.menu-menu-1-container {
             margin: 0 auto;
             padding: 0 2rem;
-            width: 96rem;
+            width: 100rem;
 
-            .current-menu-parent ul a {
+            /*.current-menu-parent ul a {
                 display: block !important;
-            }
+            }*/
 
-            >ul#sub-menu1 {
+            // >ul#sub-menu1 {
+            >ul {
                 padding: 1.2rem 0;
                 margin-top: -0.2rem;
                 list-style: none;
+
+                .current_page_item a {
+                    background: url("./assets/img/active_point.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+                    font-weight: bold;
+                    padding-left: 18px;
+                }
 
                 li {
                     display: inline-block;
@@ -188,15 +222,19 @@ header {
                     padding: 0;
                     border: 0;
 
-                    .current_page_item a {
+                    /*.current_page_item a {
                         font-weight: bold;
-                    }
+                    }*/
 
                     >a {
                         color: $color__darkblue;
-                        display: none;
+                        //display: none;
                         font-size: 1.6rem;
                         margin-right: 2rem;
+                    }
+
+                    >a:hover {
+                        font-weight: bold;
                     }
                 }
             }
