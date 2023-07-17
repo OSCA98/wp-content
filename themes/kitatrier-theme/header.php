@@ -117,13 +117,20 @@
 							break;
 						}
 					}
-					if(current_submenu.textContent.trim() === '') {
-						//alert('leer');
-						all_submenus.remove();
+					// bezieht sich auf seiten wie Impressum, Datenschutz, usw. die nicht im Menü vorhanden sind
+					if (typeof current_submenu === 'undefined') {
+						//alert('impressum datenschutz');
+						all_submenus.replaceWith('');
+					} else {
+						if (current_submenu.textContent.trim() === '') {
+							//alert('leer');
+							all_submenus.remove();
+						}
+						all_submenus.replaceWith(current_submenu);
 					}
-					all_submenus.replaceWith(current_submenu);
-					console.log('all_submenus ',current_submenu.innerHTML);
-					
+					//all_submenus.replaceWith(current_submenu);
+					//console.log('current_submenu__________ ',current_submenu.innerHTML);
+
 
 					/*if(element.classList.contains('current-menu-parent')){
 						alert('current-menu-parent');
