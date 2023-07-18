@@ -19,9 +19,14 @@
 		)
 	);
 	?>
+	<div class="topbutton" onclick="scrollToTop()">
+		<img src="wp-content\themes\kitatrier-theme\assets\img\top.png">
+	</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
+
 <script>
+	//footer anpassen
 	document.addEventListener("DOMContentLoaded", function () {
 
 		// Selektiere die ersten li von den jeweiligen untermenüs
@@ -39,6 +44,16 @@
 			}
 		});
 	});
+
+	//top button
+	// JavaScript-Code
+	function scrollToTop() {
+		// Scrollt zur oberen Position der Seite
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth' // Fügt einen animierten Übergang hinzu
+		});
+	}
 </script>
 
 </body>
