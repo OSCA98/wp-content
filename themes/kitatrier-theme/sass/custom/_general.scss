@@ -4,34 +4,37 @@ html {
 
 body {
   background-image: url("./assets/img/punkte_pattern.png");
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
-.content{
-  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+
+body, header, footer, h1, h2, h3 {
+  font-family: $font__main;
+  margin: 0;
+  padding: 0;
 }
-.content p{
-  font-size: 2rem;
+
+h1 {
+  color: $color__darkblue;
+  font-size: 3.5rem;
 }
- footer, h1, h2, h3{
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-}
+
 h2 {
   color: $color__orange;
-  font-size: 3.4rem;
+  font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
   color: $color__darkblue;
   font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 a {
   text-decoration: none;
 }
 
-ul,
-li,
-li > ul {
+ul, li {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }

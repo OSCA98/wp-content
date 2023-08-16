@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -27,12 +28,12 @@
 
 <script>
 	//footer anpassen
-	document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("DOMContentLoaded", function() {
 
 		// Selektiere die ersten li von den jeweiligen untermenüs
 		var listItems = document.querySelectorAll('footer div.menu ul > li > ul >li:first-child');
 
-		listItems.forEach(function (item) {
+		listItems.forEach(function(item) {
 			// Überprüfe, ob ein über-übergeordnetes Element existiert
 			if (item.parentNode.parentNode) {
 				var grandparentElement = item.parentNode.parentNode;
@@ -57,5 +58,17 @@
 </script>
 
 </body>
+
+<script script>
+	const akkordeonElement = document.querySelectorAll('.akkordeon');
+	console.log(akkordeonElement);
+	akkordeonElement.forEach(element => {
+		element.addEventListener('click', () => {
+
+			const content = element.children[1];
+			content.style.display = content.style.display === 'block' ? 'none' : 'block';
+		});
+	});
+</script>
 
 </html>

@@ -2,7 +2,9 @@
 /*
 Template Name: Default
 */
+
 get_header();
+
 ?>
 
 <div class="content">
@@ -12,4 +14,5 @@ get_header();
 </div>
 
 <?php
+
 get_footer();

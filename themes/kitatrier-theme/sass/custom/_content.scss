@@ -1,28 +1,92 @@
+
+
+
 .content {
-  width: 100rem;
-  background-color: $color__background-body;
 
-  margin: {
-    right: auto;
-    left: auto;
-  }
+  width: 100%;
+  max-width: 960px;
+  background-color: $color__white;
 
-  ;
-  padding: 2rem;
+  margin: 0 auto;
+  padding-block: 4rem;
+  padding-inline: 4rem;
 
-  p>a {
-    color: $color__darkblue;
-    font-size: 110%;
+  // Kontaktinfo Styling
+  .kontakt {
+    display: block;
+    height: max-content;
+    width: 100%;
+    padding: 2rem;
+    background-color: $color__gray;
+    margin-bottom: 1rem;
 
-    :visited {
-      color: inherit;
+    li {
+      color: $color__orange;
+      font-size: 1.6rem;
+    }
+
+    :first-child {
+      font-weight: 800;
     }
   }
 
+  // Download-Button Styling
+  .wp-block-file {
+
+    display: flex;
+    justify-content: end;
+
+    margin: 0;
+    padding: 0;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+
+    :first-child {
+      display: none;
+    }
+
+    a {
+      font-size: 1.6rem;
+      font-family: $font__main;
+      background-color: $color__darkblue;
+      color: $color__white;
+    }
+  }
+
+  // Akkordeon Styling
+  .akkordeon {
+
+    cursor: pointer;
+
+    h2 {
+      display: block;
+      width: 100%;
+      height: auto;
+      background-color: $color__orange;
+      color: $color__white;
+      font-size: 2.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    h2:hover {
+      opacity: .9;
+    }
+
+    h2::before {
+      margin-right: 1rem;
+
+      content: "+";
+    }
+
+    p {
+      display: none; 
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+  }
+
+
 }
 
-@media(max-width: 800px) {
-  .content {
-    width: 100vw;
-  }
-}
