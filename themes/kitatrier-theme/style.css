@@ -1335,7 +1335,8 @@ footer {
 }
 
 footer div {
-	width: 100rem;
+	width: 100%;
+	max-width: 960px;
 	height: 100%;
 	background-color: #32b5a3;
 	margin: 0 auto;
