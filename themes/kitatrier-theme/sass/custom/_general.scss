@@ -6,7 +6,8 @@ body {
   background-image: url("./assets/img/punkte_pattern.png");
 }
 
-body, header, footer, h1, h2, h3 {
+body, header, footer, h1, h2, h3, 
+.wp-block-latest-posts__post-title {
   font-family: $font__main;
   margin: 0;
   padding: 0;
@@ -15,6 +16,12 @@ body, header, footer, h1, h2, h3 {
 h1 {
   color: $color__darkblue;
   font-size: 3.5rem;
+}
+
+.wp-block-latest-posts__post-title {
+  color: $color__darkblue;
+  font-size: 3rem;
+  font-weight: 500;
 }
 
 h2 {

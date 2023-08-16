@@ -948,7 +948,8 @@ body {
 	background-image: url("./assets/img/punkte_pattern.png");
 }
 
-body, header, footer, h1, h2, h3 {
+body, header, footer, h1, h2, h3,
+.wp-block-latest-posts__post-title {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
@@ -957,6 +958,12 @@ body, header, footer, h1, h2, h3 {
 h1 {
 	color: #13364e;
 	font-size: 3.5rem;
+}
+
+.wp-block-latest-posts__post-title {
+	color: #13364e;
+	font-size: 3rem;
+	font-weight: 500;
 }
 
 h2 {
@@ -1307,6 +1314,7 @@ header > .subnavi > .menu-menu-1-container > li li > a:hover {
 .content .akkordeon p {
 	display: none;
 	margin-bottom: 2rem;
+	margin-top: -.5rem;
 	padding: 2rem;
 	border-bottom: 1px solid #ec6825;
 	border-left: 1px solid #ec6825;
@@ -1327,12 +1335,14 @@ footer {
 }
 
 footer div {
-	width: 100rem;
+	width: 100%;
+	max-width: 960px;
 	height: 100%;
 	background-color: #32b5a3;
 	margin: 0 auto;
-	padding-left: 2em;
-	padding-right: 2em;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 4rem;
 }
 
 footer div ul {
@@ -1346,12 +1356,13 @@ footer div ul {
 
 footer div ul li {
 	font-size: 1.6rem;
+	margin-right: 2rem;
 }
 
 footer div ul li a,
 footer div ul li a:visited {
 	color: #13364e;
-	border-bottom: 2px solid #13364e;
+	border-bottom: 1px solid #13364e;
 	display: inline-block;
 	width: 100%;
 }
@@ -1376,10 +1387,6 @@ footer div ul li .children > li > a:hover {
 
 footer .topbutton {
 	text-align: center;
-}
-
-footer .topbutton img {
-	margin: 6.5rem 0 2rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
