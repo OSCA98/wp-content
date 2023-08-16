@@ -948,7 +948,8 @@ body {
 	background-image: url("./assets/img/punkte_pattern.png");
 }
 
-body, header, footer, h1, h2, h3 {
+body, header, footer, h1, h2, h3,
+.wp-block-latest-posts__post-title {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
@@ -957,6 +958,12 @@ body, header, footer, h1, h2, h3 {
 h1 {
 	color: #13364e;
 	font-size: 3.5rem;
+}
+
+.wp-block-latest-posts__post-title {
+	color: #13364e;
+	font-size: 3rem;
+	font-weight: 500;
 }
 
 h2 {
@@ -1307,6 +1314,7 @@ header > .subnavi > .menu-menu-1-container > li li > a:hover {
 .content .akkordeon p {
 	display: none;
 	margin-bottom: 2rem;
+	margin-top: -.5rem;
 	padding: 2rem;
 	border-bottom: 1px solid #ec6825;
 	border-left: 1px solid #ec6825;
