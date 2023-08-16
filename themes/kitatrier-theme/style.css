@@ -1339,8 +1339,9 @@ footer div {
 	height: 100%;
 	background-color: #32b5a3;
 	margin: 0 auto;
-	padding-left: 2em;
-	padding-right: 2em;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 4rem;
 }
 
 footer div ul {
@@ -1354,12 +1355,13 @@ footer div ul {
 
 footer div ul li {
 	font-size: 1.6rem;
+	margin-right: 2rem;
 }
 
 footer div ul li a,
 footer div ul li a:visited {
 	color: #13364e;
-	border-bottom: 2px solid #13364e;
+	border-bottom: 1px solid #13364e;
 	display: inline-block;
 	width: 100%;
 }
@@ -1384,10 +1386,6 @@ footer div ul li .children > li > a:hover {
 
 footer .topbutton {
 	text-align: center;
-}
-
-footer .topbutton img {
-	margin: 6.5rem 0 2rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
