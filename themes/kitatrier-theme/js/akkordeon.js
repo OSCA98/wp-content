@@ -16,12 +16,12 @@ const renderAkkordeonblock = () => {
 			header: {
 				type: 'string',
 				source: 'html',
-				selector: '.Akkordeon-header',
+				selector: '.akkordeon-header',
 			},
 			text: {
 				type: 'string',
 				source: 'html',
-				selector: '.Akkordeon-text',
+				selector: '.akkordeon-text',
 			},
 		},
 		edit: myEdit,
@@ -35,7 +35,7 @@ const renderAkkordeonblock = () => {
 			children: [
 				el( RichText, {
 					tagName: 'div',
-					className: 'Akkordeon-header',
+					className: 'akkordeon-header',
 					value: atts.header,
 					// Listener when the RichText is changed.
 					onChange: ( value ) => {
@@ -45,7 +45,7 @@ const renderAkkordeonblock = () => {
 				/* TextSection */
 				el( RichText, {
 					tagName: 'div',
-					className: 'Akkordeon-text',
+					className: 'akkordeon-text',
 					value: atts.text,
 					// Listener when the RichText is changed.
 					onChange: ( value ) => {
@@ -63,12 +63,12 @@ const renderAkkordeonblock = () => {
 			children: [
 				el(RichText.Content, {
 					tagName: 'div',
-					className: 'Akkordeon-header',
+					className: 'akkordeon-header',
 					value: atts.header,
 				}),
 				el(RichText.Content, {
 					tagName: 'div',
-					className: 'Akkordeon-text',
+					className: 'akkordeon-text',
 					value: atts.text,
 				})
 			]

@@ -41,7 +41,7 @@
 </body>
 
 <script script>
-	const akkordeonElement = document.querySelectorAll('.akkordeon');
+	const akkordeonElement = document.querySelectorAll('.wp-block-my-akkordeon');
 	console.log(akkordeonElement);
 	akkordeonElement.forEach(element => {
 		element.addEventListener('click', () => {

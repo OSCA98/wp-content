@@ -1287,12 +1287,12 @@ header > .subnavi > .menu-menu-1-container > li li > a:hover {
 	color: #fff;
 }
 
-.content .akkordeon {
+.content .wp-block-my-akkordeon {
 	cursor: pointer;
 	margin-bottom: 1rem;
 }
 
-.content .akkordeon h2 {
+.content .akkordeon-header{
 	display: block;
 	width: 100%;
 	height: auto;
@@ -1302,16 +1302,16 @@ header > .subnavi > .menu-menu-1-container > li li > a:hover {
 	padding: 1rem;
 }
 
-.content .akkordeon h2:hover {
+.content .akkordeon-header:hover {
 	opacity: .9;
 }
 
-.content .akkordeon h2::before {
+.content .akkordeon-header::before {
 	margin-right: 1rem;
 	content: "+";
 }
 
-.content .akkordeon p {
+.content .akkordeon-text {
 	display: none;
 	margin-bottom: 2rem;
 	margin-top: -.5rem;
