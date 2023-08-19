@@ -154,6 +154,15 @@ function kitatrier_theme_scripts()
 }
 add_action('wp_enqueue_scripts', 'kitatrier_theme_scripts');
 
+//Enqueue custom properties
+function my_enqueue_block_assets() {
+
+	//Akkordeon
+  $js_directory_akkordeon = get_stylesheet_directory_uri() . '/js';
+  wp_enqueue_script('testblock', $js_directory_akkordeon . '/akkordeon.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
+
+}
+add_action('enqueue_block_editor_assets', 'my_enqueue_block_assets');
 /**
  * Implement the Custom Header feature.
  */
