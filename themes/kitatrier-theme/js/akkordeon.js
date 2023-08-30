@@ -44,7 +44,7 @@ const renderAkkordeonblock = () => {
 				}),
 				/* TextSection */
 				el( RichText, {
-					tagName: 'div',
+					tagName: 'p',
 					className: 'akkordeon-text',
 					value: atts.text,
 					// Listener when the RichText is changed.
@@ -67,7 +67,7 @@ const renderAkkordeonblock = () => {
 					value: atts.header,
 				}),
 				el(RichText.Content, {
-					tagName: 'div',
+					tagName: 'p',
 					className: 'akkordeon-text',
 					value: atts.text,
 				})

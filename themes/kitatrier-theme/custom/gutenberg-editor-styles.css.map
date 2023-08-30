@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "gutenberg-editor-styles.css",
+	"sources": [
+		"../sass/custom/gutenberg-editor-styles.css"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,iBAAiB,CAAC;CACd,gBAAgB,EAAE,OAAO;CAC5B"
+}

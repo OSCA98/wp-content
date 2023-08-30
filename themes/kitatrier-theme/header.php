@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -28,8 +29,7 @@
 	<header>
 		<div id="header" class="section-wrap">
 			<div class="content-wrap">
-				<a href="/"><img id="logo" src="http://kitatrier2.local/wp-content/uploads/2023/07/logo.png"
-						title="KITA Schneidershof" alt="KITA Schneidershof" /></a>
+				<a href="/"><img id="logo" src="/wp-content/uploads/2023/08/logo.png" title="KITA Schneidershof" alt="KITA Schneidershof" /></a>
 				<ul id="topmenu">
 					<li><a href="/impressum" title="Impressum">Impressum</a></li>
 					<li><a href="/datenschutz" title="Datenschutz">Datenschutz</a></li>
@@ -48,6 +48,7 @@
 							document.getElementById("closeNav").classList.remove("closeNavOFF");
 							document.getElementById("closeNav").classList.add("closeNavON");
 						}
+
 						function closeNav() {
 							var div = document.getElementById("mobile_aktiv");
 
@@ -99,7 +100,7 @@
 
 			?>
 			<script>
-				document.addEventListener("DOMContentLoaded", function () {
+				document.addEventListener("DOMContentLoaded", function() {
 
 					var all_submenus = document.getElementById('sub-menu1');
 					//var current_submenu =all_submenus.querySelectorAll(".sub-menu");

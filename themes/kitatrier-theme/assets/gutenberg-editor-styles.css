@@ -1,0 +1,21 @@
+.akkordeon-header {
+    background-color: #ec6825;
+    padding: 1rem;
+    color: white;
+}
+
+.akkordeon-text {
+    display: block;
+    margin-top: -.1rem;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+}
+
+.kontakt {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    padding: 1rem;
+}

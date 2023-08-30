@@ -1,4 +1,5 @@
 <?php
+
 /**
  * kitatrier-theme functions and definitions
  *
@@ -155,14 +156,27 @@ function kitatrier_theme_scripts()
 add_action('wp_enqueue_scripts', 'kitatrier_theme_scripts');
 
 //Enqueue custom properties
-function my_enqueue_block_assets() {
-
+function my_enqueue_block_assets()
+{
 	//Akkordeon
-  $js_directory_akkordeon = get_stylesheet_directory_uri() . '/js';
-  wp_enqueue_script('testblock', $js_directory_akkordeon . '/akkordeon.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
+	$js_directory_akkordeon = get_stylesheet_directory_uri() . '/js';
+	wp_enqueue_script('akkordeon', $js_directory_akkordeon . '/akkordeon.js', ['wp-blocks', 'wp-dom'], null, true);
 
+	//Kontakt
+	$js_directory_kontakt = get_stylesheet_directory_uri() . '/js';
+	wp_enqueue_script('kontakt', $js_directory_kontakt . '/kontakt.js', ['wp-blocks', 'wp-dom'], null, true);
 }
 add_action('enqueue_block_editor_assets', 'my_enqueue_block_assets');
+
+// Add backend styles for Gutenberg.
+add_action('enqueue_block_editor_assets', 'gutenberg_editor_assets');
+
+function gutenberg_editor_assets()
+{
+	// Load the theme styles within Gutenberg.
+	wp_enqueue_style('my-gutenberg-editor-styles', get_theme_file_uri('/assets/gutenberg-editor-styles.css'), FALSE);
+}
+
 /**
  * Implement the Custom Header feature.
  */

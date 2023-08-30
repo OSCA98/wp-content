@@ -1,0 +1,32 @@
+  // Akkordeon Styling
+  .akkordeon-header {
+
+    display: block;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: auto;
+    background-color: $color__orange;
+    color: $color__white;
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+
+  .akkordeon-header::before {
+    margin-right: 1rem;
+    content: "+";
+  }
+
+  .akkordeon-header:hover {
+    opacity: .9;
+  }
+
+  .akkordeon-text {
+      display: none; 
+      margin-bottom: 2rem;
+      margin-top: -1rem;
+      padding: 2rem;
+      border-bottom: 1px solid $color__orange;
+      border-left: 1px solid $color__orange;
+      border-right: 1px solid $color__orange;
+  }
