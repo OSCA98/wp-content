@@ -1,6 +1,6 @@
 footer {
   width: 100%;
-  height: 200px;
+  //height: 200px;
   @media (max-width: 800px) {
     width:100vw;
     height: fit-content;
@@ -10,7 +10,8 @@ footer {
   div {
     width: 100%;
     max-width: 960px;
-    height: 100%;
+    //height: 100%;
+    height: 30rem;
     background-color: $color__turquoise;
     margin: 0 auto;
     padding-left: 2rem;
@@ -18,6 +19,8 @@ footer {
     padding-top: 4rem;
 
     ul {
+      margin-left: 0;
+
       list-style-type: none;
       display: flex;
       flex-direction: column;
@@ -34,25 +37,25 @@ footer {
         a,
         a:visited {
           color: $color__darkblue;
-          border-bottom: 1px solid $color__darkblue;
+          border-bottom: 2px solid $color__darkblue;
           display: inline-block;
           width: 100%;
         }
 
-        .children {
+        .sub-menu {
           display: block;
           margin-top: 1em;
         }
 
-        .children > li {
+        .sub-menu > li {
           border-bottom: none;
         }
 
-        .children > li > a {
+        .sub-menu > li > a {
           color: $color__white;
           border-bottom: none;
         }
-        .children > li > a:hover{
+        .sub-menu > li > a:hover{
           color: $color__darkblue;
         }
       }
@@ -60,5 +63,13 @@ footer {
   }
   .topbutton {
     text-align: center;
+    height: 20rem;
+  }
+}
+@media (max-width: 800px) {
+  footer{
+    div{
+      height: 100%;
+    }
   }
 }

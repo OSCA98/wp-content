@@ -115,7 +115,7 @@ header {
                 width: 32rem;
                 padding-bottom: 5rem;
 
-                ul {
+                //ul {
                     list-style: none;
 
                     li {
@@ -126,10 +126,22 @@ header {
                             font-size: 2.8rem;
                             max-width: 30rem;
                             padding: 0 0 1rem 0;
+                            margin-top: 2rem;
                         }
 
                         ul {
+                            margin-left: 0rem;
+                            max-width: 30rem;
+                            padding: 0.5rem 0 0.5rem 0;
+                            .current-menu-item{
+                                color: $color__orange;
+                                a{
+                                    color: $color__orange;
+                                }
+                            }
                             li {
+                                padding: 1.2rem 0 0.8rem 0;
+                                border-bottom: 1px solid;
                                 a {
                                     color: $color__darkblue;
                                     font-size: 1.8rem;
@@ -140,7 +152,7 @@ header {
                             }
                         }
                     }
-                }
+               // }
             }
         }
     }
@@ -155,7 +167,7 @@ header {
         >.menu-menu-1-container {
             padding-left: 0;
             padding-right: 0;
-            width: 100rem;
+            width: 96rem;
             margin: 0 auto;
 
             >ul#primary-menu {
@@ -197,7 +209,7 @@ header {
         >.menu-menu-1-container {
             margin: 0 auto;
             padding: 0 2rem;
-            width: 100rem;
+            width: 96rem;
 
             /*.current-menu-parent ul a {
                 display: block !important;
@@ -208,7 +220,9 @@ header {
                 padding: 1.2rem 0;
                 margin-top: -0.2rem;
                 list-style: none;
-
+                >ul{
+                    margin-left: 0rem;
+                }
                 .current_page_item a {
                     background: url("./assets/img/active_point.png") no-repeat scroll left center rgba(0, 0, 0, 0);
                     font-weight: bold;
