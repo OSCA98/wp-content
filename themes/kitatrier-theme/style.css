@@ -972,6 +972,12 @@ h2 {
 	font-weight: 500;
 }
 
+h3 {
+	color: #ec6825;
+	font-size: 2.4rem;
+	margin-top: 4rem;
+}
+
 p {
 	color: #13364e;
 	font-size: 1.6rem;
@@ -988,6 +994,36 @@ ul, li {
 	list-style-type: none;
 }
 
+.wp-block-latest-posts__post-date {
+	font-size: 1.25rem;
+}
+
+.wp-block-latest-posts a {
+	color: #32b5a3;
+}
+
+.wp-block-latest-posts a:hover {
+	opacity: .75;
+}
+
+.wp-block-latest-posts__post-title {
+	color: #ec6825 !important;
+	text-decoration: none;
+}
+
+.wp-block-latest-posts__post-title:hover {
+	color: #ec6825;
+}
+
+p a {
+	color: #32b5a3;
+}
+
+p a:hover {
+	color: #32b5a3;
+	opacity: .75;
+}
+
 header {
 	line-height: 1;
 }
@@ -1000,9 +1036,9 @@ header > #header.section-wrap {
 
 header > #header.section-wrap > .content-wrap {
 	position: relative;
-	width: 104rem;
+	width: auto;
 	margin: 0 auto;
-	padding: 0 2rem;
+	max-width: 1000px;
 }
 
 header > #header.section-wrap > .content-wrap > a {
@@ -1094,22 +1130,39 @@ header > #header.section-wrap > .content-wrap .menu {
 	margin: 8.5rem auto;
 	width: 32rem;
 	padding-bottom: 5rem;
-}
-
-header > #header.section-wrap > .content-wrap .menu ul {
 	list-style: none;
 }
 
-header > #header.section-wrap > .content-wrap .menu ul li a {
+header > #header.section-wrap > .content-wrap .menu li a {
 	border-bottom: 0.3rem solid;
 	color: #13364e;
 	display: block;
 	font-size: 2.8rem;
 	max-width: 30rem;
 	padding: 0 0 1rem 0;
+	margin-top: 2rem;
 }
 
-header > #header.section-wrap > .content-wrap .menu ul li ul li a {
+header > #header.section-wrap > .content-wrap .menu li ul {
+	margin-left: 0rem;
+	max-width: 30rem;
+	padding: 0.5rem 0 0.5rem 0;
+}
+
+header > #header.section-wrap > .content-wrap .menu li ul .current-menu-item {
+	color: #ec6825;
+}
+
+header > #header.section-wrap > .content-wrap .menu li ul .current-menu-item a {
+	color: #ec6825;
+}
+
+header > #header.section-wrap > .content-wrap .menu li ul li {
+	padding: 1.2rem 0 0.8rem 0;
+	border-bottom: 1px solid;
+}
+
+header > #header.section-wrap > .content-wrap .menu li ul li a {
 	color: #13364e;
 	font-size: 1.8rem;
 	border: none;
@@ -1125,7 +1178,7 @@ header > .navigation {
 header > .navigation > .menu-menu-1-container {
 	padding-left: 0;
 	padding-right: 0;
-	width: 100rem;
+	width: 96rem;
 	margin: 0 auto;
 }
 
@@ -1163,7 +1216,7 @@ header > .subnavi {
 header > .subnavi > .menu-menu-1-container {
 	margin: 0 auto;
 	padding: 0 2rem;
-	width: 100rem;
+	width: 96rem;
 	/*.current-menu-parent ul a {
                 display: block !important;
             }*/
@@ -1173,6 +1226,10 @@ header > .subnavi > .menu-menu-1-container > li {
 	padding: 1.2rem 0;
 	margin-top: -0.2rem;
 	list-style: none;
+}
+
+header > .subnavi > .menu-menu-1-container > li > ul {
+	margin-left: 0rem;
 }
 
 header > .subnavi > .menu-menu-1-container > li .current_page_item a {
@@ -1244,6 +1301,7 @@ header > .subnavi > .menu-menu-1-container > li li > a:hover {
 	width: 100%;
 	max-width: 960px;
 	background-color: #fff;
+	min-height: 40rem;
 	margin: 0 auto;
 	padding-block: 4rem;
 	padding-inline: 4rem;
@@ -1289,7 +1347,6 @@ header > .subnavi > .menu-menu-1-container > li li > a:hover {
 
 footer {
 	width: 100%;
-	height: 200px;
 	background: url(./assets/img/footer-bg.jpg);
 }
 
@@ -1303,7 +1360,7 @@ footer {
 footer div {
 	width: 100%;
 	max-width: 960px;
-	height: 100%;
+	height: 30rem;
 	background-color: #32b5a3;
 	margin: 0 auto;
 	padding-left: 2rem;
@@ -1312,6 +1369,7 @@ footer div {
 }
 
 footer div ul {
+	margin-left: 0;
 	list-style-type: none;
 	display: flex;
 	flex-direction: column;
@@ -1328,31 +1386,38 @@ footer div ul li {
 footer div ul li a,
 footer div ul li a:visited {
 	color: #13364e;
-	border-bottom: 1px solid #13364e;
+	border-bottom: 2px solid #13364e;
 	display: inline-block;
 	width: 100%;
 }
 
-footer div ul li .children {
+footer div ul li .sub-menu {
 	display: block;
 	margin-top: 1em;
 }
 
-footer div ul li .children > li {
+footer div ul li .sub-menu > li {
 	border-bottom: none;
 }
 
-footer div ul li .children > li > a {
+footer div ul li .sub-menu > li > a {
 	color: #fff;
 	border-bottom: none;
 }
 
-footer div ul li .children > li > a:hover {
+footer div ul li .sub-menu > li > a:hover {
 	color: #13364e;
 }
 
 footer .topbutton {
 	text-align: center;
+	height: 20rem;
+}
+
+@media (max-width: 800px) {
+	footer div {
+		height: 100%;
+	}
 }
 
 .akkordeon-header {

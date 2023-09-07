@@ -62,4 +62,6 @@ const renderKontaktblock = () => {
 };
 
 // Invoke the render function
-renderKontaktblock();
+wp.domReady(() => {
+  renderKontaktblock();
+});
