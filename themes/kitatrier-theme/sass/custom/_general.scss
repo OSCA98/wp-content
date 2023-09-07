@@ -51,3 +51,35 @@ ul, li {
   padding: 0;
   list-style-type: none;
 }
+
+.wp-block-latest-posts__post-date {
+  font-size: 1.25rem;
+}
+
+.wp-block-latest-posts {
+  a {
+    color: #32b5a3;
+  }
+  a:hover {
+    opacity: .75;
+  }
+}
+
+.wp-block-latest-posts__post-title {
+  color: $color__orange !important;
+  text-decoration: none;
+}
+
+.wp-block-latest-posts__post-title:hover {
+  color: $color__orange;
+}
+
+p {
+  a {
+    color: #32b5a3;
+  }
+  a:hover {
+    color: #32b5a3;
+    opacity: .75;
+  }
+}

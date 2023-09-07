@@ -27,6 +27,10 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
+
+
+</body>
+
 <script>
 	//top button
 	// JavaScript-Code
@@ -38,8 +42,6 @@
 		});
 	}
 </script>
-
-</body>
 
 <script script>
 	const akkordeonElement = document.querySelectorAll('.wp-block-my-akkordeon');
