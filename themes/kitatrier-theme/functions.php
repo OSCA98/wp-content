@@ -53,6 +53,7 @@ function kitatrier_theme_setup()
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__('Primary', 'kitatrier-theme'),
+			'secondary' => esc_html__( 'Footer Menu', 'kitatrier-theme' ),
 		)
 	);
 

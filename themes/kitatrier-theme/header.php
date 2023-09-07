@@ -65,11 +65,12 @@
 					<a id="closeNav" class="closeNavOFF" onclick="closeNav();">CLOSE</a>
 					<div id="mobile_inaktiv" class="mobile">
 						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'footer-menu',
-							)
-						);
+						wp_nav_menu(array(
+							'theme_location' => 'secondary', // Verwenden Sie den Namen, den Sie in register_nav_menus verwendet haben
+							//'container' => 'nav', // Das HTML-Element, das das Menü umgibt (z.B. 'div' oder 'nav')
+							//'container_class' => 'footer-menu', // CSS-Klasse für das Container-Element
+							//'menu_class' => 'footer-menu-list', // CSS-Klasse für die Menüliste
+						));
 						?>
 					</div>
 				</nav>
@@ -113,7 +114,7 @@
 						//console.log(all_submenus.children[i].classList);
 						all_submenus.children[i].firstChild.remove();
 
-						if (all_submenus.children[i].classList.contains('current-menu-item')) {
+						if (all_submenus.children[i].classList.contains('current-menu-ancestor')) {
 							current_submenu = all_submenus.children[i];
 							break;
 						}

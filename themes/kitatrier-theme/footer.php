@@ -14,14 +14,15 @@
 
 <footer>
 	<?php
-	wp_nav_menu(
-		array(
-			'theme_location' => 'footer-menu',
-		)
-	);
+	wp_nav_menu(array(
+		'theme_location' => 'secondary', // Verwenden Sie den Namen, den Sie in register_nav_menus verwendet haben
+		//'container' => 'nav', // Das HTML-Element, das das Menü umgibt (z.B. 'div' oder 'nav')
+		//'container_class' => 'footer-menu', // CSS-Klasse für das Container-Element
+		//'menu_class' => 'footer-menu-list', // CSS-Klasse für die Menüliste
+	));
 	?>
 	<div class="topbutton" onclick="scrollToTop()">
-		<img src="wp-content\themes\kitatrier-theme\assets\img\top.png">
+		<img src="\wp-content\themes\kitatrier-theme\assets\img\top.png">
 	</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
