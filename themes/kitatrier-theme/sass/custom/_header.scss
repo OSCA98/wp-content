@@ -177,11 +177,12 @@ header {
                 .current_page_item {
                     background-color: $color__yellow;
                 }
-
+                display: flex;
+                flex-wrap: wrap;
                 li {
-                    display: inline-block;
+                    //display: inline-block;
                     margin-right: 3rem;
-
+                    flex: inherit;
                     >a {
                         color: $color__darkblue;
                         display: block;
@@ -257,7 +258,8 @@ header {
     }
 }
 
-@media(max-width: 800px) {
+//tablet ansicht
+@media(max-width: 900px) {
     body {
         width: 100vw;
         height: 100vh;
@@ -266,6 +268,13 @@ header {
 }
 
 
+@media(max-width: 900px) {
+    header > .navigation > .menu-menu-1-container {
+       width: 100%;
+      }
+}
+
+//mobile ansicht
 @media(max-width: 800px) {
     header {
         #header {
