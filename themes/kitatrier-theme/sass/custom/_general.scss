@@ -70,6 +70,9 @@ ul, li {
   text-decoration: none;
 }
 
+.wp-block-columns {
+  flex-wrap: wrap-reverse;
+}
 .wp-block-latest-posts__post-title:hover {
   color: $color__orange;
 }
