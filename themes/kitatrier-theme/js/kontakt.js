@@ -2,9 +2,9 @@
  * Renderfunction
  */
 const renderKontaktblock = () => {
-	const el = wp.element.createElement;
-	const { registerBlockType } = wp.blocks;
-	const { RichText } = wp.blockEditor;
+	const el = window.wp.element.createElement;
+	const { registerBlockType } = window.wp.blocks;
+	const { RichText } = window.wp.blockEditor;
 
 	registerBlockType('my/kontakt', {
 		title: 'Kontakt',
@@ -13,21 +13,9 @@ const renderKontaktblock = () => {
 		attributes: {
 			listItems: {
 				type: 'array',
-				source: 'children',
-				selector: 'ul.kontakt',
+				default: [], // Initialize the listItems attribute as an empty array
 			},
 		},
-		styles: [
-			{
-				name: 'default',
-				label: 'Standard',
-				isDefault: true,
-			},
-			{
-				name: 'fancy',
-				label: 'Fancy Style',
-			},
-		],
 		edit: myEdit,
 		save: mySave,
 	});
@@ -57,11 +45,11 @@ const renderKontaktblock = () => {
 	function mySave(props) {
 		const atts = props.attributes;
 
-		return el('ul', { className: 'kontakt' }, atts.listItems.map(item => el('li', null, item)));
+		// Filter out empty list items before saving
+		const filteredListItems = atts.listItems.filter(item => item !== '');
+
+		return el('ul', { className: 'kontakt' }, filteredListItems.map(item => el('li', null, item)));
 	}
 };
 
-// Invoke the render function
-wp.domReady(() => {
-  renderKontaktblock();
-});
+renderKontaktblock();
